@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D8129D92B97177F008AB9FA /* TriForkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8129D82B97177F008AB9FA /* TriForkApp.swift */; };
+		1D8129DB2B97177F008AB9FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8129DA2B97177F008AB9FA /* ContentView.swift */; };
+		1D8129DD2B971780008AB9FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8129DC2B971780008AB9FA /* Assets.xcassets */; };
+		1D8129E02B971780008AB9FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8129DF2B971780008AB9FA /* Preview Assets.xcassets */; };
+		1D8129EF2B971842008AB9FA /* NetworkStatusCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8129EE2B971842008AB9FA /* NetworkStatusCheck.swift */; };
+		1D8129F12B97186A008AB9FA /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8129F02B97186A008AB9FA /* NetworkReachability.swift */; };
+		1D8129F32B971885008AB9FA /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8129F22B971885008AB9FA /* NetworkError.swift */; };
+		1D8129F52B97189D008AB9FA /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8129F42B97189D008AB9FA /* Parsing.swift */; };
+		1D8129F72B971913008AB9FA /* GitHubOrganizationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8129F62B971913008AB9FA /* GitHubOrganizationsView.swift */; };
+		1D8129F92B971928008AB9FA /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8129F82B971928008AB9FA /* Responses.swift */; };
+		1D8129FB2B971957008AB9FA /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8129FA2B971957008AB9FA /* RepositoriesViewModel.swift */; };
+		1D8129FD2B971981008AB9FA /* RepositoriesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8129FC2B971981008AB9FA /* RepositoriesFetcher.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D8129D52B97177F008AB9FA /* TriForkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriForkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D8129D82B97177F008AB9FA /* TriForkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriForkApp.swift; sourceTree = "<group>"; };
+		1D8129DA2B97177F008AB9FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1D8129DC2B971780008AB9FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D8129DF2B971780008AB9FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1D8129EE2B971842008AB9FA /* NetworkStatusCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusCheck.swift; sourceTree = "<group>"; };
+		1D8129F02B97186A008AB9FA /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		1D8129F22B971885008AB9FA /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		1D8129F42B97189D008AB9FA /* Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing.swift; sourceTree = "<group>"; };
+		1D8129F62B971913008AB9FA /* GitHubOrganizationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubOrganizationsView.swift; sourceTree = "<group>"; };
+		1D8129F82B971928008AB9FA /* Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
+		1D8129FA2B971957008AB9FA /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
+		1D8129FC2B971981008AB9FA /* RepositoriesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesFetcher.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D8129D22B97177F008AB9FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D8129CC2B97177F008AB9FA = {
+			isa = PBXGroup;
+			children = (
+				1D8129D72B97177F008AB9FA /* TriForkApp */,
+				1D8129D62B97177F008AB9FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D8129D62B97177F008AB9FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D8129D52B97177F008AB9FA /* TriForkApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D8129D72B97177F008AB9FA /* TriForkApp */ = {
+			isa = PBXGroup;
+			children = (
+				1D8129D82B97177F008AB9FA /* TriForkApp.swift */,
+				1D8129E72B9717A7008AB9FA /* Connectivity */,
+				1D8129E82B9717B1008AB9FA /* Errors */,
+				1D8129E92B9717B9008AB9FA /* Utilities */,
+				1D8129EB2B9717C8008AB9FA /* Models */,
+				1D8129EA2B9717C1008AB9FA /* Views */,
+				1D8129ED2B971802008AB9FA /* ViewModels */,
+				1D8129EC2B9717CF008AB9FA /* Network */,
+				1D8129DC2B971780008AB9FA /* Assets.xcassets */,
+				1D8129DE2B971780008AB9FA /* Preview Content */,
+			);
+			path = TriForkApp;
+			sourceTree = "<group>";
+		};
+		1D8129DE2B971780008AB9FA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1D8129DF2B971780008AB9FA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1D8129E72B9717A7008AB9FA /* Connectivity */ = {
+			isa = PBXGroup;
+			children = (
+				1D8129EE2B971842008AB9FA /* NetworkStatusCheck.swift */,
+				1D8129F02B97186A008AB9FA /* NetworkReachability.swift */,
+			);
+			path = Connectivity;
+			sourceTree = "<group>";
+		};
+		1D8129E82B9717B1008AB9FA /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				1D8129F22B971885008AB9FA /* NetworkError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		1D8129E92B9717B9008AB9FA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1D8129F42B97189D008AB9FA /* Parsing.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1D8129EA2B9717C1008AB9FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D8129DA2B97177F008AB9FA /* ContentView.swift */,
+				1D8129F62B971913008AB9FA /* GitHubOrganizationsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1D8129EB2B9717C8008AB9FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D8129F82B971928008AB9FA /* Responses.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1D8129EC2B9717CF008AB9FA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1D8129FC2B971981008AB9FA /* RepositoriesFetcher.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1D8129ED2B971802008AB9FA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1D8129FA2B971957008AB9FA /* RepositoriesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D8129D42B97177F008AB9FA /* TriForkTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D8129E32B971780008AB9FA /* Build configuration list for PBXNativeTarget "TriForkTestApp" */;
+			buildPhases = (
+				1D8129D12B97177F008AB9FA /* Sources */,
+				1D8129D22B97177F008AB9FA /* Frameworks */,
+				1D8129D32B97177F008AB9FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TriForkTestApp;
+			productName = TriForkTestApp;
+			productReference = 1D8129D52B97177F008AB9FA /* TriForkApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D8129CD2B97177F008AB9FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					1D8129D42B97177F008AB9FA = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 1D8129D02B97177F008AB9FA /* Build configuration list for PBXProject "TriForkApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D8129CC2B97177F008AB9FA;
+			productRefGroup = 1D8129D62B97177F008AB9FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D8129D42B97177F008AB9FA /* TriForkTestApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D8129D32B97177F008AB9FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D8129E02B971780008AB9FA /* Preview Assets.xcassets in Resources */,
+				1D8129DD2B971780008AB9FA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D8129D12B97177F008AB9FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D8129DB2B97177F008AB9FA /* ContentView.swift in Sources */,
+				1D8129EF2B971842008AB9FA /* NetworkStatusCheck.swift in Sources */,
+				1D8129F72B971913008AB9FA /* GitHubOrganizationsView.swift in Sources */,
+				1D8129D92B97177F008AB9FA /* TriForkApp.swift in Sources */,
+				1D8129FB2B971957008AB9FA /* RepositoriesViewModel.swift in Sources */,
+				1D8129F92B971928008AB9FA /* Responses.swift in Sources */,
+				1D8129F12B97186A008AB9FA /* NetworkReachability.swift in Sources */,
+				1D8129FD2B971981008AB9FA /* RepositoriesFetcher.swift in Sources */,
+				1D8129F52B97189D008AB9FA /* Parsing.swift in Sources */,
+				1D8129F32B971885008AB9FA /* NetworkError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D8129E12B971780008AB9FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1D8129E22B971780008AB9FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D8129E42B971780008AB9FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TriForkApp/Preview Content\"";
+				DEVELOPMENT_TEAM = Y3UL99DY85;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.islandlabs.TriForkApp;
+				PRODUCT_NAME = TriForkApp;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D8129E52B971780008AB9FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TriForkApp/Preview Content\"";
+				DEVELOPMENT_TEAM = Y3UL99DY85;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.islandlabs.TriForkApp;
+				PRODUCT_NAME = TriForkApp;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D8129D02B97177F008AB9FA /* Build configuration list for PBXProject "TriForkApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D8129E12B971780008AB9FA /* Debug */,
+				1D8129E22B971780008AB9FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D8129E32B971780008AB9FA /* Build configuration list for PBXNativeTarget "TriForkTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D8129E42B971780008AB9FA /* Debug */,
+				1D8129E52B971780008AB9FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D8129CD2B97177F008AB9FA /* Project object */;
+}
