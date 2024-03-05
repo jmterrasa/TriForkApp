@@ -71,43 +71,8 @@ struct GitHubOrganizationsView: View {
     }
 }
 
-// MARK: - Views
-struct OrganizationView: View {
-    
-    var organization: Organization
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text(organization.login)
-                .font(.headline)
-            Text("ID: \(organization.id)")
-                .font(.subheadline)
-            Text("URL: \(organization.url)")
-                .font(.subheadline)
-        }
-    }
-}
-
-struct RepositoryView: View {
-    
-    var repository: Repository
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text("Owner: \(repository.owner.login)")
-                .font(.headline)
-            Text("Name: \(repository.name)")
-                .font(.subheadline)
-            Text("Desc: \(repository.description ?? "")")
-                .font(.subheadline)
-            Text("Size: \(repository.size.multiply(by: 1024)) Bytes")
-                .font(.subheadline)
-        }
-    }
-}
-
 //MARK: - extensions
-private extension Array where Element: Identifiable {
+extension Array where Element: Identifiable {
     func isLastItem(_ item: Element) -> Bool {
         guard let index = self.firstIndex(where: { $0.id == item.id }) else {
             return false
@@ -116,7 +81,7 @@ private extension Array where Element: Identifiable {
     }
 }
 
-private extension Optional where Wrapped == Int {
+extension Optional where Wrapped == Int {
     func multiply(by factor: Int) -> Int {
         return self ?? 0 * factor
     }

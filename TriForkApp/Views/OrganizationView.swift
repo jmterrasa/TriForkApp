@@ -1,18 +1,17 @@
-//
-//  OrganizationView.swift
-//  TriForkTestApp
-//
-//  Created by Jaime Jesús Martínez Terrasa on 5/3/24.
-//
-
 import SwiftUI
 
 struct OrganizationView: View {
+    
+    var organization: Organization
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text(organization.login)
+                .font(.headline)
+            Text("ID: \(organization.id)")
+                .font(.subheadline)
+            Text("URL: \(organization.url)")
+                .font(.subheadline)
+        }
     }
-}
-
-#Preview {
-    OrganizationView()
 }

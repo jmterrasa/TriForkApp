@@ -19,6 +19,8 @@
 		1D8129F92B971928008AB9FA /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8129F82B971928008AB9FA /* Responses.swift */; };
 		1D8129FB2B971957008AB9FA /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8129FA2B971957008AB9FA /* RepositoriesViewModel.swift */; };
 		1D8129FD2B971981008AB9FA /* RepositoriesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8129FC2B971981008AB9FA /* RepositoriesFetcher.swift */; };
+		1DFC09972B97BAFD0054E1D5 /* OrganizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC09962B97BAFD0054E1D5 /* OrganizationView.swift */; };
+		1DFC09992B97BB2B0054E1D5 /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC09982B97BB2B0054E1D5 /* RepositoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		1D8129F82B971928008AB9FA /* Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
 		1D8129FA2B971957008AB9FA /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
 		1D8129FC2B971981008AB9FA /* RepositoriesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesFetcher.swift; sourceTree = "<group>"; };
+		1DFC09962B97BAFD0054E1D5 /* OrganizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationView.swift; sourceTree = "<group>"; };
+		1DFC09982B97BB2B0054E1D5 /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				1D8129DA2B97177F008AB9FA /* ContentView.swift */,
+				1DFC09962B97BAFD0054E1D5 /* OrganizationView.swift */,
+				1DFC09982B97BB2B0054E1D5 /* RepositoryView.swift */,
 				1D8129F62B971913008AB9FA /* GitHubOrganizationsView.swift */,
 			);
 			path = Views;
@@ -219,8 +225,10 @@
 			files = (
 				1D8129DB2B97177F008AB9FA /* ContentView.swift in Sources */,
 				1D8129EF2B971842008AB9FA /* NetworkStatusCheck.swift in Sources */,
+				1DFC09992B97BB2B0054E1D5 /* RepositoryView.swift in Sources */,
 				1D8129F72B971913008AB9FA /* GitHubOrganizationsView.swift in Sources */,
 				1D8129D92B97177F008AB9FA /* TriForkApp.swift in Sources */,
+				1DFC09972B97BAFD0054E1D5 /* OrganizationView.swift in Sources */,
 				1D8129FB2B971957008AB9FA /* RepositoriesViewModel.swift in Sources */,
 				1D8129F92B971928008AB9FA /* Responses.swift in Sources */,
 				1D8129F12B97186A008AB9FA /* NetworkReachability.swift in Sources */,

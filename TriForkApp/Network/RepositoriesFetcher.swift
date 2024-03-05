@@ -25,7 +25,7 @@ extension RepositoriesFetcher: RepositoriesFetchable {
     }
     
     func fetchRepositoriesByOwner(ownerLogin: String, page: Int) -> AnyPublisher<[Repository], NetworkError> {
-        return repositories(with: makeGitHubRepositoriesComponentsFromOwner(owner: ownerLogin, page: page))
+        return repositories(with: makeGitHubRepositoriesComponentsByOwner(owner: ownerLogin, page: page))
     }
     
     private func repositories<T>(with components: URLComponents) -> AnyPublisher<T, NetworkError> where T: Decodable {
@@ -66,7 +66,7 @@ private extension RepositoriesFetcher {
         static let path = "/search"
     }
     
-    func makeGitHubRepositoriesComponentsFromOwner(owner: String, page: Int) -> URLComponents {
+    func makeGitHubRepositoriesComponentsByOwner(owner: String, page: Int) -> URLComponents {
         var components = URLComponents()
         components.scheme = GitHubRepositoriesAPI.scheme
         components.host = GitHubRepositoriesAPI.host
