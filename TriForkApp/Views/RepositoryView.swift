@@ -17,3 +17,9 @@ struct RepositoryView: View {
         }
     }
 }
+
+private extension Optional where Wrapped == Int {
+    func multiply(by factor: Int) -> Int {
+        return self ?? 0 * factor
+    }
+}

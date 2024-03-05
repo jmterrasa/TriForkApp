@@ -72,7 +72,7 @@ struct GitHubOrganizationsView: View {
 }
 
 //MARK: - extensions
-extension Array where Element: Identifiable {
+private extension Array where Element: Identifiable {
     func isLastItem(_ item: Element) -> Bool {
         guard let index = self.firstIndex(where: { $0.id == item.id }) else {
             return false
@@ -81,10 +81,6 @@ extension Array where Element: Identifiable {
     }
 }
 
-extension Optional where Wrapped == Int {
-    func multiply(by factor: Int) -> Int {
-        return self ?? 0 * factor
-    }
-}
+
 
 
