@@ -2,12 +2,12 @@ import Foundation
 import Combine
 import Network
 
-protocol RepositoriesFetchable {
+protocol RepositoryFetchable {
     func fetchOrganizations(page: Int) -> AnyPublisher<SearchResult, NetworkError>
     func fetchRepositoriesByOwner(ownerLogin: String, page: Int) -> AnyPublisher<[Repository], NetworkError>
 }
 
-class RepositoriesFetcher {
+class RepositoryFetcher {
     
     private let session: URLSession
     private var cancellables: Set<AnyCancellable> = []
@@ -17,8 +17,8 @@ class RepositoriesFetcher {
     }
 }
 
-// MARK: - RepositoriesFetchable
-extension RepositoriesFetcher: RepositoriesFetchable {
+// MARK: - RepositoryFetchable
+extension RepositoryFetcher: RepositoryFetchable {
     
     func fetchOrganizations(page: Int) -> AnyPublisher<SearchResult, NetworkError> {
         return fetch(with: makeGitHubOrganizationsComponents(page: page))
@@ -50,7 +50,7 @@ extension RepositoriesFetcher: RepositoriesFetchable {
 }
 
 // MARK: - GitHubRepositories API
-private extension RepositoriesFetcher {
+private extension RepositoryFetcher {
     
     struct GitHubRepositoriesAPI {
         static let scheme = "https"

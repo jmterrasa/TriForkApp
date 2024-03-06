@@ -6,7 +6,7 @@ class RepositoriesViewModel: ObservableObject {
     @Published var repositoriesByOwner: [Repository] = []
     var swappingRepositoriesByOwner: [Repository] = []
     @Published var organizations: SearchResult
-    private let repositoriesFetcher: RepositoriesFetchable
+    private let RepositoryFetcher: RepositoryFetchable
     private var cancellables: Set<AnyCancellable> = []
     var errorNetwork: NetworkError?
     var currentPage: Int = 1
@@ -20,9 +20,9 @@ class RepositoriesViewModel: ObservableObject {
     @Published var seekingOrg: String = ""
     private var disposables = Set<AnyCancellable>()
     
-    init(repositoriesFetcher: RepositoriesFetchable) {
+    init(RepositoryFetcher: RepositoryFetchable) {
         
-        self.repositoriesFetcher = repositoriesFetcher
+        self.RepositoryFetcher = RepositoryFetcher
         self.organizations = SearchResult(totalCount: 0, incompleteResults: false, items: [])
        
         $seekingOrg
@@ -45,7 +45,7 @@ class RepositoriesViewModel: ObservableObject {
     
     func loadOrganizations() {
         
-        repositoriesFetcher.fetchOrganizations(page: self.currentPage)
+        RepositoryFetcher.fetchOrganizations(page: self.currentPage)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 if case let .failure(error) = completion {
@@ -65,7 +65,7 @@ class RepositoriesViewModel: ObservableObject {
     
     func loadRepositoriesByOwner(ownerLogin: String) {
         
-        repositoriesFetcher.fetchRepositoriesByOwner(ownerLogin: ownerLogin, page: self.currentPage)
+        RepositoryFetcher.fetchRepositoriesByOwner(ownerLogin: ownerLogin, page: self.currentPage)
             .receive(on: DispatchQueue.main)
             .removeDuplicates()
             .sink(receiveCompletion: { completion in

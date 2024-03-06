@@ -3,12 +3,12 @@ import SwiftUI
 @main
 struct TriForkApp: App {
    
-    let fetcher = RepositoriesFetcher()
+    let fetcher = RepositoryFetcher()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(RepositoriesViewModel(repositoriesFetcher: fetcher))
+                .environmentObject(RepositoriesViewModel(RepositoryFetcher: fetcher))
                 .environmentObject(NetworkReachability())
         }
     }
