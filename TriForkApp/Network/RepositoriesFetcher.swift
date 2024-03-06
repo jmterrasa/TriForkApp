@@ -21,14 +21,14 @@ class RepositoriesFetcher {
 extension RepositoriesFetcher: RepositoriesFetchable {
     
     func fetchOrganizations(page: Int) -> AnyPublisher<SearchResult, NetworkError> {
-        return repositories(with: makeGitHubOrganizationsComponents(page: page))
+        return fetch(with: makeGitHubOrganizationsComponents(page: page))
     }
     
     func fetchRepositoriesByOwner(ownerLogin: String, page: Int) -> AnyPublisher<[Repository], NetworkError> {
-        return repositories(with: makeGitHubRepositoriesComponentsByOwner(owner: ownerLogin, page: page))
+        return fetch(with: makeGitHubRepositoriesByOwnerComponents(owner: ownerLogin, page: page))
     }
     
-    private func repositories<T>(with components: URLComponents) -> AnyPublisher<T, NetworkError> where T: Decodable {
+    private func fetch<T>(with components: URLComponents) -> AnyPublisher<T, NetworkError> where T: Decodable {
         
         guard let url = components.url else {
             let error = NetworkError.networkError
@@ -66,19 +66,6 @@ private extension RepositoriesFetcher {
         static let path = "/search"
     }
     
-    func makeGitHubRepositoriesComponentsByOwner(owner: String, page: Int) -> URLComponents {
-        var components = URLComponents()
-        components.scheme = GitHubRepositoriesAPI.scheme
-        components.host = GitHubRepositoriesAPI.host
-        components.path = "\(GitHubRepositoriesFromOrganizationAPI.path)/\(owner)/repos"
-        components.queryItems = [
-            URLQueryItem(name: "page", value: String(page)),
-            URLQueryItem(name: "per_page", value: String(15)),
-        ]
-        
-        return components
-    }
-    
     func makeGitHubOrganizationsComponents(page: Int) -> URLComponents {
         var components = URLComponents()
         components.scheme = GitHubRepositoriesAPI.scheme
@@ -87,6 +74,19 @@ private extension RepositoriesFetcher {
         components.queryItems = [
             URLQueryItem(name: "q", value: "type:org"),
             URLQueryItem(name: "page", value: String(page)),
+        ]
+        
+        return components
+    }
+    
+    func makeGitHubRepositoriesByOwnerComponents(owner: String, page: Int) -> URLComponents {
+        var components = URLComponents()
+        components.scheme = GitHubRepositoriesAPI.scheme
+        components.host = GitHubRepositoriesAPI.host
+        components.path = "\(GitHubRepositoriesFromOrganizationAPI.path)/\(owner)/repos"
+        components.queryItems = [
+            URLQueryItem(name: "page", value: String(page)),
+            URLQueryItem(name: "per_page", value: String(15)),
         ]
         
         return components
