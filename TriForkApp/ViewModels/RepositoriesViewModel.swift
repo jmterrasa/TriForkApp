@@ -5,7 +5,7 @@ class RepositoriesViewModel: ObservableObject {
     
     @Published var repositoriesByOwner: [Repository] = []
     var swappingRepositoriesByOwner: [Repository] = []
-    @Published var organizations: SearchResult
+    @Published var organizations: GitHubOrganizationsResponse
     private let RepositoryFetcher: RepositoryFetchable
     private var cancellables: Set<AnyCancellable> = []
     var errorNetwork: NetworkError?
@@ -23,7 +23,7 @@ class RepositoriesViewModel: ObservableObject {
     init(RepositoryFetcher: RepositoryFetchable) {
         
         self.RepositoryFetcher = RepositoryFetcher
-        self.organizations = SearchResult(totalCount: 0, incompleteResults: false, items: [])
+        self.organizations = GitHubOrganizationsResponse(totalCount: 0, incompleteResults: false, items: [])
        
         $seekingOrg
             .dropFirst(1)

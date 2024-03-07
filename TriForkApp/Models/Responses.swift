@@ -1,6 +1,6 @@
 import Foundation
 
-struct SearchResult: Codable {
+struct GitHubOrganizationsResponse: Codable {
     let totalCount: Int
     let incompleteResults: Bool
     var items: [Organization]

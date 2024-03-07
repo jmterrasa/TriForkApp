@@ -3,7 +3,7 @@ import Combine
 import Network
 
 protocol RepositoryFetchable {
-    func fetchOrganizations(page: Int) -> AnyPublisher<SearchResult, NetworkError>
+    func fetchOrganizations(page: Int) -> AnyPublisher<GitHubOrganizationsResponse, NetworkError>
     func fetchRepositoriesByOwner(ownerLogin: String, page: Int) -> AnyPublisher<[Repository], NetworkError>
 }
 
@@ -20,7 +20,7 @@ class RepositoryFetcher {
 // MARK: - RepositoryFetchable
 extension RepositoryFetcher: RepositoryFetchable {
     
-    func fetchOrganizations(page: Int) -> AnyPublisher<SearchResult, NetworkError> {
+    func fetchOrganizations(page: Int) -> AnyPublisher<GitHubOrganizationsResponse, NetworkError> {
         return fetch(with: makeGitHubOrganizationsComponents(page: page))
     }
     
