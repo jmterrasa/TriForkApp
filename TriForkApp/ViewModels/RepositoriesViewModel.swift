@@ -80,6 +80,7 @@ class RepositoriesViewModel: ObservableObject {
             }, receiveValue: { [weak self] newRepositoriesByOwner in
                 self?.swappingRepositoriesByOwner.append(contentsOf: newRepositoriesByOwner)
                 self?.swappingRepositoriesByOwner = self?.swappingRepositoriesByOwner.removeDuplicatesInArray() ?? []
+                print( "%d", self?.swappingRepositoriesByOwner.count ?? 0)
                 self?.repositoriesByOwner = self?.swappingRepositoriesByOwner ?? []
             })
             .store(in: &cancellables)
